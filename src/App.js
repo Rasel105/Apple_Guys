@@ -1,17 +1,23 @@
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home'
 import Dashboard from './components/Dashboard/Dashboard'
+import NavBar from './components/NavBar/NavBar';
+import About from './components/About/About'
+import Reviews from './components/Reviews/Reviews'
+import Blogs from './components/Blogs/Blogs'
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home></Home>}></Route>
-          <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
-        </Routes>
-      </BrowserRouter>
+      <NavBar></NavBar>
+      <Routes>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
+        <Route path='/reviews' element={<Reviews></Reviews>}></Route>
+        <Route path='/about' element={<About></About>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+      </Routes>
     </div>
   );
 }
