@@ -17,7 +17,7 @@ const CustomLink = ({ children, to, ...props }) => {
                >
                     {children}
                </Link>
-               {/* {match && " (active)"} */}
+               {/* {match && "(Tick)"} */}
           </div>
      );
 };

@@ -1,77 +1,98 @@
 import React from 'react';
-import { CartesianGrid, Legend, Line, LineChart, Pie, PieChart, Tooltip, XAxis, YAxis, Sector, Cell, ResponsiveContainer } from 'recharts';
+import { CartesianGrid, Legend, Line, LineChart, Pie, PieChart, Tooltip, XAxis, YAxis, AreaChart, Area, Scatter, Bar, ComposedChart } from 'recharts';
 
 const Dashboard = () => {
      const data = [
           {
-               name: 'Supplier A',
-               Price: 4000,
-               Sales: 2400,
-               Due: 2400,
+               "month": "Mar",
+               "investment": 100000,
+               "sell": 241,
+               "revenue": 10401
           },
           {
-               name: 'Supplier B',
-               Price: 3000,
-               Sales: 1398,
-               Due: 2210,
+               "month": "Apr",
+               "investment": 200000,
+               "sell": 423,
+               "revenue": 24500
           },
           {
-               name: 'Supplier C',
-               Price: 2000,
-               Sales: 9800,
-               Due: 2290,
+               "month": "May",
+               "investment": 500000,
+               "sell": 726,
+               "revenue": 67010
           },
           {
-               name: 'Supplier D',
-               Price: 2780,
-               Sales: 3908,
-               Due: 2000,
+               "month": "Jun",
+               "investment": 500000,
+               "sell": 529,
+               "revenue": 40405
           },
           {
-               name: 'Supplier E',
-               Price: 1890,
-               Sales: 4800,
-               Due: 2181,
+               "month": "Jul",
+               "investment": 600000,
+               "sell": 601,
+               "revenue": 50900
           },
           {
-               name: 'Supplier F',
-               Price: 2390,
-               Sales: 3800,
-               Due: 2500,
-          },
-          {
-               name: 'Supplier G',
-               Price: 3490,
-               Sales: 4300,
-               Due: 2100,
-          },
-     ];
+               "month": "Aug",
+               "investment": 700000,
+               "sell": 670,
+               "revenue": 61000
+          }
+     ]
      return (
           <>
-               <div className='flex justify-center'>
+               <div className='grid grid-cols-2 px-28 my-10'>
                     <div>
-                         <h1>Investment VS Revenue</h1>
+                         <h1 className='font-serif text-green-600 text-2xl mb-4'>Investment VS Revenue</h1>
                          <LineChart width={450} height={400} data={data}>
-                              <Line dataKey={'Price'}></Line>
-                              <Line dataKey={'Sales'}></Line>
-                              <Line dataKey={'Due'}></Line>
+                              <Line dataKey={'investment'}></Line>
+                              <Line dataKey={'sell'}></Line>
+                              <Line dataKey={'revenue'}></Line>
                               <Legend />
                               <Tooltip />
                               <CartesianGrid strokeDasharray="1" />
                               <YAxis />
-                              <XAxis dataKey={'name'} />
+                              <XAxis dataKey={'month'} />
                          </LineChart >
+
                     </div>
                     <div>
-                         <h1>Investment VS Revenue</h1>
+                         <h1 className='font-serif text-green-600 text-2xl mb-4'>Investment VS Revenue</h1>
                          <PieChart width={450} height={400}>
-                              <Pie data={data} dataKey="Price" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
-                              <Pie data={data} dataKey="Sales" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
+                              <Pie data={data} dataKey="investment" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
+                              <Pie data={data} dataKey="sell" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
+                              <Pie data={data} dataKey="revenue" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
                               <Tooltip />
                          </PieChart>
+
+                    </div>
+
+                    <div>
+                         <h1 className='font-serif text-green-600 text-2xl my-4'>Investment VS Revenue</h1>
+                         <AreaChart width={450} height={400} data={data}>
+                              <XAxis dataKey="month" />
+                              <YAxis />
+                              <Area dataKey="investment" stroke="#8884d8" fill="#8884d8" />
+                              {/* <Bar dataKey="investment" barSize={20} fill="#413ea0" /> */}
+                              <Area dataKey="sell" stroke="#8884d8" fill="#8884d8" />
+                              <Area dataKey="revenue" stroke="#8884d8" fill="#8884d8" />
+                              <Tooltip />
+                         </AreaChart>
                     </div>
                     <div>
-
+                         <h1 className='font-serif text-green-600 text-2xl my-4'>Investment VS Revenue</h1>
+                         <ComposedChart width={450} height={400} data={data}>
+                              <CartesianGrid />
+                              <XAxis dataKey="month" />
+                              <YAxis />
+                              <Tooltip />
+                              <Legend />
+                              <Area type="monotone" dataKey="month" fill="#8884d8" stroke="#8884d8" />
+                              <Bar dataKey="investment" barSize={20} fill="#413ea0" />
+                              <Line type="monotone" dataKey="sell" stroke="#ff7300" />
+                              <Scatter type="monotone" dataKey="revenue" fill="red" />
+                         </ComposedChart>
                     </div>
                </div>
           </>
