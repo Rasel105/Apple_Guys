@@ -24,7 +24,7 @@ const Home = () => {
                </div>
 
 
-               <h2 className='text-4xl font-semibold mt-8'>Customer Reviews: {reviews.length}</h2>
+               <h2 className='text-4xl font-semibold mt-8'>Customer Reviews</h2>
                <div className='grid grid-cols-3 gap-7 p-10'>
                     {
                          reviews.slice(0, 3).map(review => <CustomerReiview
@@ -32,6 +32,9 @@ const Home = () => {
                               review={review}
                          />)
                     }
+               </div>
+               <div className='mb-5'>
+                    <Link to='/reviews' className='bg-violet-200 py-3 px-6 rounded-xl text-xl text-violet-700 font-medium'>See All Reviews</Link>
                </div>
 
           </>
