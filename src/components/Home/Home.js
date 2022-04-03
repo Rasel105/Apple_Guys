@@ -8,7 +8,7 @@ const Home = () => {
      return (
           <>
                <div>
-                    <div className='sticky top-0 bg-white px-12 py-8 flex justify-center items-center'>
+                    <div className=' px-12 py-8 flex justify-center items-center'>
                          <div className='text-left'>
                               <h1 className='text-6xl font-extrabold mb-1'>You Next Laptop</h1>
                               <h1 className='text-6xl font-extrabold mb-5 text-violet-600'>Your Best laptop</h1>
@@ -24,8 +24,8 @@ const Home = () => {
                </div>
 
 
-               <h2 className='text-4xl font-semibold mb-10'>Customer Reviews: {reviews.length}</h2>
-               <div className='grid grid-cols-3 gap-4 p-10'>
+               <h2 className='text-4xl font-semibold mt-8'>Customer Reviews: {reviews.length}</h2>
+               <div className='grid grid-cols-3 gap-7 p-10'>
                     {
                          reviews.slice(0, 3).map(review => <CustomerReiview
                               key={review.id}
