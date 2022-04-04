@@ -9,12 +9,13 @@ const Home = () => {
      return (
           <>
                <div>
-                    <div className=' px-12 py-8 flex justify-center items-center'>
+                    <div className='px-12 py-8 flex justify-center items-center'>
                          <div className='text-left'>
+                              <h1 className='text-4xl font-extrabold mb-5 text-teal-500'>Apple Guys</h1>
                               <h1 className='text-6xl font-extrabold mb-1'>Every Last Byte</h1>
                               <h1 className='text-6xl font-extrabold mb-5 text-violet-600'>Those Apple Guys</h1>
                               <p className='mb-10 text-lg font-bold text-gray-500'>Our reputation of excellence, value and integrity has made us a trusted partner throughout Government for information technology services and solutions of the highest quality, and we will continue to earn that reputation every day.</p>
-                              <Link to='/dashboard' className='bg-violet-200 py-3 px-6 rounded-xl text-2xl text-violet-700 font-medium'>Explore Now</Link>
+                              <Link to='/dashboard' className='bg-violet-200 py-3 px-6 rounded-xl text-2xl text-violet-700 font-medium hover:bg-violet-300'>Explore Now</Link>
                          </div>
                          <div >
                               <img className='h-[450px] w-[1200px]' src="https://i.ebayimg.com/thumbs/images/g/2B8AAOSwBnxhoEJO/s-l300.jpg" />
