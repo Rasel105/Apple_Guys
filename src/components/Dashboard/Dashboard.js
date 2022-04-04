@@ -61,8 +61,8 @@ const Dashboard = () => {
                          <h1 className='font-serif text-green-600 text-2xl mb-4'>Investment VS Revenue</h1>
                          <PieChart width={500} height={400}>
                               <Pie data={data} dataKey="investment" outerRadius={50} fill="#8884d8" label />
-                              <Pie data={data} dataKey="sell" innerRadius={50} outerRadius={80} fill="#82ca9d" label />
-                              <Pie data={data} dataKey="revenue" innerRadius={50} outerRadius={80} fill="purple" label />
+                              <Pie data={data} innerRadius={50} outerRadius={80} fill="#82ca9d" label />
+                              <Pie data={data} innerRadius={50} outerRadius={80} fill="purple" label />
                               <Tooltip />
                          </PieChart>
 
