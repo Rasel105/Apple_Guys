@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 
-const CustomerReiview = ({ review }) => {
+const AllReview = ({ review }) => {
      const { name, comment, img, ratings, } = review;
      return (
           <div className='bg-slate-200 p-10 rounded-3xl shadow-2xl'>
@@ -15,9 +15,7 @@ const CustomerReiview = ({ review }) => {
                     </span>
                     <p className='text-base text-gray-800'>“{comment}”</p>
                </div>
-
           </div>
      );
 };
-
-export default CustomerReiview;
+export default AllReview;

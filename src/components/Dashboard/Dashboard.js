@@ -41,7 +41,7 @@ const Dashboard = () => {
           }
      ]
      return (
-          <>
+          <div>
                <div className='grid grid-cols-2 px-28 my-10'>
                     <div>
                          <h1 className='font-serif text-green-600 text-2xl mb-4'>Investment VS Revenue</h1>
@@ -59,10 +59,10 @@ const Dashboard = () => {
                     </div>
                     <div>
                          <h1 className='font-serif text-green-600 text-2xl mb-4'>Investment VS Revenue</h1>
-                         <PieChart width={450} height={400}>
-                              <Pie data={data} dataKey="investment" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
-                              <Pie data={data} dataKey="sell" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
-                              <Pie data={data} dataKey="revenue" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
+                         <PieChart width={500} height={400}>
+                              <Pie data={data} dataKey="investment" outerRadius={50} fill="#8884d8" label />
+                              <Pie data={data} dataKey="sell" innerRadius={50} outerRadius={80} fill="#82ca9d" label />
+                              <Pie data={data} dataKey="revenue" innerRadius={50} outerRadius={80} fill="purple" label />
                               <Tooltip />
                          </PieChart>
 
@@ -95,7 +95,7 @@ const Dashboard = () => {
                          </ComposedChart>
                     </div>
                </div>
-          </>
+          </div>
 
      );
 };
