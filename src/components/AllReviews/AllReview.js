@@ -6,7 +6,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 const AllReview = ({ review }) => {
      const { name, comment, img, ratings, } = review;
      return (
-          <div className='bg-slate-200 p-10 rounded-3xl shadow-2xl'>
+          <div className='bg-slate-200 p-10 rounded-3xl shadow-2xl mx-auto max-w-7xl'>
                <img className='rounded-3xl mb-4' src={img} alt="" />
                <div className='text-left'>
                     <span className='flex justify-between'>

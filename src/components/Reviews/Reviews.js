@@ -6,7 +6,7 @@ const Reviews = () => {
      const [reviews, setReviews] = useCutomerReviews()
      return (
           <div>
-               <h2 className='text-4xl font-semibold mt-8 underline'>All Customer Reviews</h2>
+               <h2 className='text-4xl font-semibold mt-8'>All Customer Reviews</h2>
                <div className='grid grid-cols-3 gap-7 p-10'>
 
                     {
