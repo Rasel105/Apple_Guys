@@ -1,6 +1,6 @@
-# Getting Started with Apple Guys
+# Explore Apple Guys
 
- # You can see Live web Preview of [Apple Guys](https://apple-guys.netlify.app/).
+ # You can see Live Web Preview of [Apple Guys](https://apple-guys.netlify.app/).
 
 * The name of of the Project is Apple Guys
 * Where I created a Navbar which has 5 link With Custom link when you click A link then it'll show a green color.
@@ -9,3 +9,4 @@
 * If you click See All Reviews Button it'll redirect you to the Review section. then you can see 6 card where I stored all customer Reviews.
 * The Dashboard Section where I made 4 Chart. 1. Pie Chart 2. Area Chart 3. Line Chart and 4. Composed Chart. Where I stored Investment and Review Data
 * After that I made Blogs Section Where I Answered 3 Question ans.
+* Last but not the List, Here I use Tailwing CSS, React Router DOM and Recharts
